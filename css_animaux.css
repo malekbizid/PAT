@@ -1,0 +1,112 @@
+/* css_animaux.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header, footer {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #111;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em;
+}
+
+.hero {
+    background-color: #add8e6;
+    padding: 2em;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 125px;
+    height: 125px;
+    margin-right: 1em;
+}
+
+.hero-text {
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-family: 'Arial Black', Gadget, sans-serif; /* Ou une autre police en gras */
+    color: #333; /* Couleur de votre choix */
+    margin: 0;
+}
+
+.hero-text h2 {
+    margin: 0;
+}
+
+.about, .media, .gallery {
+    padding: 2em;
+}
+
+.gallery img {
+    width: 100%; /* ou une largeur fixe comme 300px */
+    height: auto; /* pour maintenir le ratio d'aspect */
+    padding: 0.5em; /* pour ajouter un peu d'espace autour des images */
+    border-radius: 10px; /* optionnel, pour des coins arrondis */
+    background-color: rgb(120, 27, 27);
+}
+
+
+
+.about table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2em;
+}
+
+.about th, .about td {
+    border: 2px solid darkblue;
+    padding: 1em;
+}
+
+.about caption {
+    margin-bottom: 1em;
+}
+
+.images img {
+    width: 20%;
+    height: 150px;
+    padding: 0.5em;
+}
+
+@media (min-width: 768px) {
+    .images {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title> Login Page</title>
+</head>
+
+<body>
+    <header class="header1">
+        <a href="#" class="logo"><img style="width: 90px;" src="../img/logo.png" alt=""></a>
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="./page2.html">Aidez-Nous</a>
+            <a href="../">Form </a>
+            <a href="./indx.html">Login</a>
+        </nav>
+    </header>
+    <div class="container0">
+        <div class="container" id="container">
+            <div class="form-container sign-up">
+                <form action="index.php" method="post">
+                    <h1>Cree un compte </h1>
+                    <div class="social-icons">
+                        <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                    <span>utilisez votre email pour s'inscrire</span>
+                    <input type="text" placeholder="Name" name="name">
+
+                    <input type="email" placeholder="Email" name="email">
+                    <input type="password" placeholder="Password" name="password">
+
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+            <div class="form-container sign-in">
+                <form id="form">
+                    <h1>Connecter vous </h1>
+                    <div class="social-icons">
+                        <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                        <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                    <span>ou utilisez votre email password</span>
+                    <input id="email" type="email" placeholder="Email">
+                    <div class="error"></div>
+                    <input id="pass" type="password" placeholder="Password">
+                    <div class="error"></div>
+
+                    <a href="#">Mot de pass oublié?</a>
+                    <button type="submit">Sign In</button>
+                </form>
+            </div>
+            <div class="toggle-container">
+                <div class="toggle">
+                    <div class="toggle-panel toggle-left">
+                        <h1>Salut!</h1>
+                        <p>Ecrivez votre password and email pour vous connecter avec nous!</p>
+                        <button class="hidden" id="login">Sign In</button>
+                    </div>
+                    <div class="toggle-panel toggle-right">
+                        <h1>Salut!</h1>
+                        <p>Ecrivez votre password and email pour vous connecter avec nous!</p>
+                        <button class="hidden" id="register">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

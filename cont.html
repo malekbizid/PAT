@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="icon" href="contact.ico" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page">
+    <section class="image">
+        <img src="anim-removebg.png" alt="animal" id="animal">
+        <h1 id="im">CONTACTEZ-NOUS</h1> 
+    </section>
+    
+    <h1><em>Contactez-nous par mail :</em></h1><br><br>
+    <form id="contactForm" action="form1.php" method="post" onsubmit="return validateForm()">
+        <section class="identification">
+            <label for="nom">Votre nom</label> <br>
+            <input type="text" id="nom" name="nom"> <br><br>
+            <label for="adresse">Votre adresse de messagerie</label> <br>
+            <input type="text" id="adresse" name="adresse"><br><br>
+            <label for="numero">Votre numéro de téléphone</label><br>
+            <input type="text" id="numero" name="numero"><br><br>
+        </section>
+
+        <section class="objet">
+            <label for="objet">Objet de votre message</label>
+            <br>
+            <input list="objets" id="objet" name="objet">
+            <datalist id="objets">
+              <option value="information"></option>
+              <option value="adoption"></option>
+              <option value="parrainage"></option>
+            </datalist>
+        </section>
+
+        <br>
+        <section class="extra-info">
+            <label for="extra">Votre message</label>
+            <br>
+            <textarea id="extra" name="extra" rows="3" cols="40"></textarea>
+        </section>
+        <section class="submission">
+            <input type="submit" value="ENVOYER">
+        </section>    
+    </form>
+    <a class="mail-link" href="mailto:associationpat17@gmail.com?subject=sujet de message">mail</a>
+    <section class="feedback">
+        <h2>Votre avis nous intéresse !</h2>
+        <form id="feedbackForm" action="/feedback_submit" method="post" onsubmit="return validateFeedbackForm()">
+            <label for="feedback_name">Votre nom :</label><br>
+            <input type="text" id="feedback_name" name="feedback_name" required><br><br>
+            
+            <label for="feedback_email">Votre adresse email :</label><br>
+            <input type="email" id="feedback_email" name="feedback_email" required><br><br>
+            
+            <label for="feedback_message">Votre message :</label><br>
+            <textarea id="feedback_message" name="feedback_message" rows="4" required></textarea><br><br>
+            
+            <input type="submit" value="Envoyer">
+        </form>
+    </section>
+    <section class="reclamation">
+        <h2>Faire une réclamation</h2>
+        <form id="reclamationForm" action="/reclamation_submit" method="post" onsubmit="return validateReclamationForm()">
+            <label for="reclamation_name">Votre nom :</label><br>
+            <input type="text" id="reclamation_name" name="reclamation_name" required><br><br>
+            
+            <label for="reclamation_email">Votre adresse email :</label><br>
+            <input type="email" id="reclamation_email" name="reclamation_email" required><br><br>
+            
+            <label for="reclamation_message">Votre réclamation :</label><br>
+            <textarea id="reclamation_message" name="reclamation_message" rows="4" required></textarea><br><br>
+
+            <input type="submit" value="Envoyer">
+        </form>
+    </section>
+    <footer>
+        <p></p>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script>
+        function validateForm() {
+            var nom = document.getElementById("nom").value;
+            var adresse = document.getElementById("adresse").value;
+            var numero = document.getElementById("numero").value;
+            var objet = document.getElementById("objet").value;
+            var extra = document.getElementById("extra").value;
+
+            var numericRegex = /^[0-9]+$/;
+
+            if (nom === "" || adresse === "" || numero === "" || objet === "" || extra === "") {
+                alert("Veuillez remplir tous les champs");
+                return false;
+            }
+
+            if (!numericRegex.test(numero)) {
+                alert("Veuillez entrer un numéro de téléphone valide");
+                return false;
+            }
+
+            return true;
+        }
+
+        function validateFeedbackForm() {
+            var name = document.getElementById("feedback_name").value;
+            var email = document.getElementById("feedback_email").value;
+            var message = document.getElementById("feedback_message").value;
+
+            if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+                alert("Veuillez remplir tous les champs !");
+                return false;
+            }
+            return true;
+        }
+
+        function validateReclamationForm() {
+            var name = document.getElementById("reclamation_name").value;
+            var email = document.getElementById("reclamation_email").value;
+            var message = document.getElementById("reclamation_message").value;
+
+            if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+                alert("Veuillez remplir tous les champs !");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

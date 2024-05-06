@@ -1,0 +1,200 @@
+
+.page {
+    max-width: 780px;
+    margin: 0 auto;
+    font-family: 'Source Sans Pro', Calibri, Tahoma, sans-serif;
+    padding: 40px;
+    background-color: #f9f9f9; 
+    background-image: url('back.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+#animal {
+    display: block;
+    margin: 0 auto 20px; 
+}
+
+
+#im {
+    font-weight: bold;
+    font-size: 24px; 
+    color: #549ecd; 
+}
+
+
+label {
+    display: block; 
+    font-weight: bold;
+    margin-bottom: 5px; 
+    color: #333; 
+}
+
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+
+.objet select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+
+.submission input[type="submit"] {
+    background-color: #549ecd; 
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submission input[type="submit"]:hover {
+    background-color: #447cb3; 
+}
+
+
+footer {
+    margin-top: 40px; 
+    text-align: center; 
+}
+
+footer ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+footer ul li {
+    display: inline-block;
+    margin-right: 10px; 
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #549ecd; 
+}
+
+footer ul li a:hover {
+    text-decoration: underline; 
+}
+
+
+a.mail-link {
+    display: inline-block;
+    background-color: #549ecd; 
+    color: white;
+    padding: 10px 20px; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    transition: background-color 0.3s; 
+}
+
+a.mail-link:hover {
+    background-color: #447cb3;
+}
+.feedback {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.feedback h2 {
+    color: #549ecd;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.feedback label {
+    font-weight: bold;
+}
+
+.feedback input[type="text"],
+.feedback input[type="email"],
+.feedback textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.feedback textarea {
+    height: 100px;
+}
+
+.feedback input[type="submit"] {
+    background-color: #549ecd;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.feedback input[type="submit"]:hover {
+    background-color: #447cb3;
+}
+.reclamation {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.reclamation h2 {
+    color: #549ecd;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.reclamation label {
+    font-weight: bold;
+}
+
+.reclamation input[type="text"],
+.reclamation input[type="email"],
+.reclamation textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.reclamation textarea {
+    height: 100px;
+}
+
+.reclamation input[type="submit"] {
+    background-color: #549ecd;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reclamation input[type="submit"]:hover {
+    background-color: #447cb3;
+}

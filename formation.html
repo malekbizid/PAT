@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demande de collaboration</title>
+    <link rel="stylesheet" href="C:\Users\user\OneDrive\Bureau\web_work\css\survey.css">
+</head>
+<body>
+    <h1>Demande de collaboration</h1>
+    <form id="formulaireCollaboration" action="C:\Users\user\OneDrive\Bureau\web_work\php\formation.php" method="post"></form>
+        <label for="nomOrganisation">Nom de l'organisation :</label>
+        <input type="text" id="nomOrganisation" name="nomOrganisation" required>
+        <br>
+        <label for="personneContact">Personne de contact :</label>
+        <input type="text" id="personneContact" name="personneContact" required>
+        <br>
+        <label for="email">Adresse e-mail :</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="telephone">Numéro de téléphone :</label>
+        <input type="tel" id="telephone" name="telephone" required>
+        <br>
+        <label for="collaborationInterest">Décrivez votre intérêt pour collaborer avec nous :</label>
+        <textarea id="collaborationInterest" name="collaborationInterest" rows="4" required></textarea>
+        <br>
+        <button type="submit">Envoyer</button>
+    </form>
+
+    <script>
+        document.getElementById("formulaireCollaboration").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const nomOrganisation = document.getElementById("nomOrganisation").value.trim();
+            const personneContact = document.getElementById("personneContact").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const telephone = document.getElementById("telephone").value.trim();
+            const collaborationInterest = document.getElementById("collaborationInterest").value.trim();
+
+            // Vérification de la syntaxe de l'adresse e-mail
+            if (!isValidEmail(email)) {
+                alert("Veuillez entrer une adresse e-mail valide.");
+                return;
+            }
+
+            // Vérification du numéro de téléphone (doit contenir uniquement des chiffres)
+            if (!isValidPhoneNumber(telephone)) {
+                alert("Veuillez entrer un numéro de téléphone valide (chiffres uniquement).");
+                return;
+            }
+
+            // Vérification que tous les champs sont remplis
+            if (!nomOrganisation || !personneContact || !email || !telephone || !collaborationInterest) {
+                alert("Veuillez remplir tous les champs obligatoires.");
+                return;
+            }
+
+        });
+
+        // Fonction pour vérifier la syntaxe de l'adresse e-mail
+        function isValidEmail(email) {
+            const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            return emailRegex.test(email);
+        }
+
+        // Fonction pour vérifier le numéro de téléphone (chiffres uniquement)
+        function isValidPhoneNumber(phone) {
+            const phoneRegex = /^\d+$/;
+            return phoneRegex.test(phone);
+        }
+    </script>
+</body>
+</html>
